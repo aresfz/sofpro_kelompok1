@@ -23,14 +23,14 @@
 
 
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="/dashboard">
             <span>Dashboard</span>
         </a>
     </li>
 
 
     <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{URL::to('/dashboard/mataPelajaran')}}">
             <span>Kelola Mata Pelajaran</span>
         </a>
     </li>
