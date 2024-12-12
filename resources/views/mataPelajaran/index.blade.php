@@ -1,59 +1,70 @@
 @extends('partials.app')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <!-- Card untuk Data Mata Pelajaran -->
-            <div class="card">
-                <div class="card-header">
-                    <h5 class="mb-0">Data Mata Pelajaran</h5>
-                </div>
 
-                <div class="container">
-                    <div class="row mb-3">
-                        <div class="col-8">
-                        </div>
-                        <div class="col-4 d-flex justify-content-end">
-                            <a href="{{ route('mataPelajaran.create') }}" class="btn btn-success"><i class="fa fa-fw fa-plus"></i> Add</a>
-                        </div>
-                    </div>
-
-                    <div class="card-body">
-                        <!-- Table untuk Menampilkan Data Mata Pelajaran -->
-                        <table class="table table-bordered">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th>Kode Mapel</th>
-                                    <th>Nama Mapel</th>
-                                    <th>Action</th> <!-- Kolom aksi -->
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach($mataPelajaran as $mataPelajaran)
-                                <tr>
-                                    <!-- Menampilkan nama mata pelajaran -->
-                                    <td>{{ $mataPelajaran->kode_mapel }}</td>
-                                    <!-- Menampilkan deskripsi mata pelajaran -->
-                                    <td>{{ $mataPelajaran->nama_mapel }}</td>
-                                    <td>
-                                        <a href="{{ route('mataPelajaran.edit', $mataPelajaran->id) }}" class="btn btn-primary btn-sm">Edit</a>
-                                        <!-- Tombol Hapus -->
-                                        <form action="{{ route('mataPelajaran.destroy', $mataPelajaran->id) }}" method="POST" style="display:inline;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                                        </form>
-                                        <!-- Tombol Edit -->
-                                    </td>
-                                </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
-                    </div>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1>Data Mata Pelajaran</h1>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <!-- /.row -->
+            <div class="row">
+        <div class="col-12">
+            <div class="card">
+            <div class="card-header">
+                <h3 class="card-title">Responsive Hover Table</h3>
+
+                <div class="card-tools d-flex">
+                <a href="{{ route('mataPelajaran.create') }}" class="btn btn-success btn-sm mr-2">Add New</a>
+            
+                </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                <thead>
+                    <tr>
+                    <th>Kode Mapel</th>
+                    <th>Nama Mapel</th>
+                    <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($mataPelajaran as $mataPelajaran)
+                    <tr>
+                    <td>{{ $mataPelajaran->kode_mapel }}</td>
+                    <td>{{ $mataPelajaran->nama_mapel }}</td>
+                    <td>
+                        <a href="{{ route('mataPelajaran.edit', $mataPelajaran->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                        <form action="{{ route('mataPelajaran.destroy', $mataPelajaran->id) }}" method="POST" style="display:inline;">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+                </table>
+            </div>
+            <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+        </div>
 </div>
+        <!-- /.row -->
+
+        </div>
+    </section>
+</div>
+
 @endsection
