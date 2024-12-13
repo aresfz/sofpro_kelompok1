@@ -2,6 +2,18 @@
 
 @extends('partials.app')
 
+@section('head')
+<style>
+    .text-wrap td, 
+    .text-wrap th {
+        white-space: normal;
+        word-wrap: break-word;
+        word-break: break-word;
+    }
+</style>
+@endsection
+
+
 @section('content')
 <div class="content-wrapper">
     <section class="content-header">
@@ -26,13 +38,13 @@
                             </div>
                         </div>
                         <div class="card-body table-responsive p-0">
-                            <table class="table table-hover text-nowrap">
+                            <table class="table table-hover text-nowrap table-bordered">
                                 <thead>
                                     <tr>
-                                        <th>Kode Karir</th>
-                                        <th>Nama Karir</th>
-                                        <th>Deskripsi</th>
-                                        <th>Action</th>
+                                        <th class="small-column">Kode Karir</th>
+                                        <th class="medium-column">Nama Karir</th>
+                                        <th class="large-column">Deskripsi</th>
+                                        <th class="small-column">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,9 +52,10 @@
                                         <tr>
                                             <td>{{ $kar->kode_karir }}</td>
                                             <td>{{ $kar->nama_karir }}</td>
-                                            <td>{{ $kar->deskripsi }}</td>
+                                            <td>{{ Str::limit($kar->deskripsi, 50, '...') }}</td>
                                             <td>
-                                                <a href="{{ route('karir.edit', $kar->id) }}" class="btn btn-primary btn-sm">Edit</a>
+                                            <a href="{{ route('karir.show', $kar->id) }}" class="btn btn-info btn-sm">Detail</a>
+                                            <a href="{{ route('karir.edit', $kar->id) }}" class="btn btn-primary btn-sm">Edit</a>
                                                 <form action="{{ route('karir.destroy', $kar->id) }}" method="POST" style="display:inline;">
                                                     @csrf
                                                     @method('DELETE')
@@ -53,6 +66,9 @@
                                     @endforeach
                                 </tbody>
                             </table>
+                            <div class="mt-3">
+                                {{ $karir->links('pagination::bootstrap-4') }}
+                            </div>
                         </div>
                     </div>
                 </div>

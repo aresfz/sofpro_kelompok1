@@ -1,0 +1,6 @@
+.text-wrap td, 
+.text-wrap th {
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: break-word;
+}
