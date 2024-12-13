@@ -13,28 +13,24 @@
             </div>
         </div>
     </section>
-
-    <section class="content">
-        <div class="container-fluid">
-            <!-- /.row -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                    <div class="card-header">
-    <h3 class="card-title">Tabel Siswa</h3>
-
-    <div class="card-tools d-flex">
-        <!-- Tombol Add New -->
-        <a href="{{ route('siswa.create') }}" class="btn btn-success btn-sm mr-2">Add New</a>
-
-        <!-- Form Search -->
-        <form action="{{ route('siswa.index') }}" method="GET" class="form-inline ml-2">
-            <input type="text" name="search" class="form-control form-control-sm" placeholder="Search Siswa">
-            <button type="submit" class="btn btn-primary btn-sm ml-2">Search</button>
-        </form>
-    </div>
-</div>
-
+        <section class="content">
+            <div class="container-fluid">
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                        <div class="card-header">
+                        <h3 class="card-title">Tabel Siswa</h3>
+                        <div class="card-tools d-flex">
+                            <!-- Tombol Add New -->
+                            <a href="{{ route('siswa.create') }}" class="btn btn-success btn-sm mr-2">Add New</a>
+                                            <!-- Form Search -->
+                            <form action="{{ route('siswa.index') }}" method="GET" class="form-inline ml-2">
+                                <input type="text" name="search" class="form-control form-control-sm" placeholder="Search Siswa">
+                                <button type="submit" class="btn btn-primary btn-sm ml-2">Search</button>
+                            </form>
+                        </div>
+                    </div>
                         <!-- /.card-header -->
                         <div class="card-body table-responsive p-0">
                             <table class="table table-hover text-nowrap">
