@@ -53,7 +53,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-user-plus"></i>
               <p>
                 Kelola Siswa
               </p>
@@ -61,7 +61,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-check-double"></i>
               <p>
                 Kelola Karir
               </p>
@@ -69,7 +69,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-list-ul"></i>
               <p>
                 Kelola Roadmap
               </p>
@@ -77,7 +77,7 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-marker"></i>
               <p>
                 Kelola Karakteristik
               </p>
