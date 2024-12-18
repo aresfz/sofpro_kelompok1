@@ -8,10 +8,21 @@ use Illuminate\Http\Request;
 class SiswaController extends Controller
 {
     //
-    public function index(){
-        $siswa = Siswa::all();
+    public function index(Request $request)
+    {
+        $search = $request->input('search');
+
+        if ($search) {
+            $siswa = Siswa::where('Nama', 'like', "%$search%")
+                            ->orWhere('id', 'like', "%$search%")
+                            ->paginate(10);
+        } else {
+            $siswa = Siswa::paginate(10);
+        }
+
         return view('siswa.index', compact('siswa'));
     }
+
 
     public function create()
     {

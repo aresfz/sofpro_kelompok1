@@ -12,7 +12,7 @@ class KarirController extends Controller
     // Menampilkan data karir
     public function index()
     {
-        $karir = Karir::all();
+        $karir = Karir::paginate(10);
         return view('karir.index', compact('karir'));
     }
 
@@ -64,4 +64,11 @@ class KarirController extends Controller
         $karir->delete();
         return redirect()->route('karir.index');
     }
+
+    public function show($id)
+    {
+        $karir = Karir::findOrFail($id); // Ambil data berdasarkan ID
+        return view('karir.show', compact('karir')); // Tampilkan view detail
+    }
+
 }

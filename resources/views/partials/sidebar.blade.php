@@ -36,8 +36,8 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            <li class="nav-item menu-open">
-                <a href="/dashboard" class="nav-link active">
+            <li class="nav-item">
+                <a href="/dashboard" class="nav-link">
                     <i class="nav-icon fas fa-tachometer-alt"></i>
                     <p>Dashboard</p>
                 </a>
@@ -52,7 +52,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{URL::to('/dashboard/siswa')}}" class="nav-link">
               <i class="nav-icon fas fa-user-plus"></i>
               <p>
                 Kelola Siswa
@@ -60,31 +60,31 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-check-double"></i>
+            <a href="{{URL::to('/dashboard/karir')}}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
               <p>
                 Kelola Karir
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-list-ul"></i>
+            <a href="{{URL::to('/dashboard/nilai')}}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
               <p>
-                Kelola Roadmap
+                Nilai Siswa
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-marker"></i>
+            <a href="{{URL::to('/dashboard/karakteristik')}}" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
               <p>
                 Kelola Karakteristik
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{URL::to('/dashboard/rekomendasi')}}" class="nav-link">
             <i class="nav-icon fas fa-file"></i>              <p>
                 Hasil Rekomendasi
               </p>
