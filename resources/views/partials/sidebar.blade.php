@@ -69,7 +69,7 @@
           </li>
           <li class="nav-item">
             <a href="{{URL::to('/dashboard/nilai')}}" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-list-ul"></i>
               <p>
                 Nilai Siswa
               </p>
@@ -77,7 +77,7 @@
           </li>
           <li class="nav-item">
             <a href="{{URL::to('/dashboard/karakteristik')}}" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
+              <i class="nav-icon fas fa-marker"></i>
               <p>
                 Kelola Karakteristik
               </p>
