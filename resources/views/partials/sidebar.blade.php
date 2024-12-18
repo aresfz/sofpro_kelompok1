@@ -68,15 +68,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{URL::to('/dashboard/nilai')}}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
-                Kelola Roadmap
+                Nilai Siswa
               </p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{URL::to('/dashboard/karakteristik')}}" class="nav-link">
               <i class="nav-icon fas fa-edit"></i>
               <p>
                 Kelola Karakteristik
@@ -84,7 +84,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{URL::to('/dashboard/rekomendasi')}}" class="nav-link">
             <i class="nav-icon fas fa-file"></i>              <p>
                 Hasil Rekomendasi
               </p>

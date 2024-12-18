@@ -15,6 +15,11 @@
                 @method('PUT')
 
                 <div class="form-group">
+                    <label for="Nama">Nama</label>
+                    <input type="text" name="Nama" id="Nama" class="form-control" value="{{ $siswa->Nama }}" required placeholder="Masukkan nilai C1">
+                </div>
+
+                <div class="form-group">
                     <label for="C1">C1</label>
                     <input type="number" name="C1" id="C1" class="form-control" value="{{ $siswa->C1 }}" required placeholder="Masukkan nilai C1">
                 </div>

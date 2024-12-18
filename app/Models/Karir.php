@@ -12,4 +12,14 @@ class Karir extends Model
 
     protected $table = 'karir';
     protected $fillable = ['kode_karir', 'nama_karir', 'deskripsi'];
+
+    public function karakteristik()
+    {
+        return $this->hasMany(Karakteristik::class);
+    }
+    
+    public function rekomendasi()
+    {
+        return $this->hasMany(Rekomendasi::class);
+    }
 }
