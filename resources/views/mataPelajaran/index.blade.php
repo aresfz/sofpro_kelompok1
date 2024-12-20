@@ -21,7 +21,7 @@
         <div class="col-12">
             <div class="card">
             <div class="card-header">
-                <h3 class="card-title">Responsive Hover Table</h3>
+                <h3 class="card-title">Mata Pelajaran</h3>
 
                 <div class="card-tools d-flex">
                 <a href="{{ route('mataPelajaran.create') }}" class="btn btn-success btn-sm mr-2">Add New</a>

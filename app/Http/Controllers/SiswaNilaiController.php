@@ -9,26 +9,30 @@ use Illuminate\Http\Request;
 class SiswaNilaiController extends Controller
 {
     // Menampilkan form untuk menambah nilai siswa
-    public function create()
+    public function create(Request $request)
     {
-        $siswa = Siswa::all();  // Ambil semua siswa
-        $mataPelajaran = MataPelajaran::all(); // Ambil semua mata pelajaran
+        $siswa = Siswa::all();
+        $mataPelajaran = MataPelajaran::all();
+
         return view('siswa_nilai', compact('siswa', 'mataPelajaran'));
     }
 
-    // Menyimpan data nilai siswa
+    // Menyimpan data nilai siswa secara batch
     public function store(Request $request)
     {
         $validated = $request->validate([
             'siswa_id' => 'required|exists:siswa,id',
-            'mata_pelajaran_id' => 'required|exists:mata_pelajaran,id',
-            'nilai' => 'required|numeric',
+            'nilai' => 'required|array',
+            'nilai.*' => 'numeric|between:0,100',
         ]);
 
-        // Simpan nilai siswa ke tabel pivot
         $siswa = Siswa::findOrFail($request->siswa_id);
-        $siswa->mataPelajaran()->attach($request->mata_pelajaran_id, ['nilai' => $request->nilai]);
 
-        return redirect()->route('siswa_nilai.create')->with('success', 'Nilai berhasil disimpan');
+        foreach ($validated['nilai'] as $mataPelajaranId => $nilai) {
+            // Menyimpan ke tabel pivot antara siswa dan mata pelajaran
+            $siswa->mataPelajaran()->attach($mataPelajaranId, ['nilai' => $nilai]);
+        }
+
+        return redirect()->route('siswa_nilai.create')->with('success', 'Nilai berhasil disimpan untuk semua mata pelajaran');
     }
 }
