@@ -21,14 +21,19 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only('email', 'password');
-
-        if (Auth::attempt($credentials)) {
-            return redirect()->route('dashboard');
+    
+        if (Auth::attempt($credentials)) {  // Pastikan pengguna berhasil login terlebih dahulu
+            // Setelah login berhasil, periksa apakah pengguna memiliki role 'admin'
+            if (Auth::user() && Auth::user()->role === 'admin') {
+                return redirect()->route('dashboard');  // Redirect ke halaman admin jika role adalah admin
+            }
+    
+            return redirect()->route('dashboard');  // Redirect ke halaman utama jika bukan admin
         }
-
+    
         return back()->withErrors(['message' => 'Invalid credentials'])->withInput();
     }
-
+    
     public function logout(Request $request)
     {
         Auth::logout();

@@ -17,9 +17,16 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         User::factory()->create([
-            'name' => 'Admin RPL',
-            'email' => 'adminrpl@gmail.com',
-            'password' => Hash::make ('admin123'),
+            'name' => 'Guru RPL',
+            'email' => 'gururpl@gmail.com',
+            'password' => Hash::make ('guru123'),
+        ]);
+
+        User::create([
+            'name' => 'Super Admin',
+            'Email' => 'admin@rpl.com',
+            'password' => Hash::make('admin123'), // Gantilah dengan password yang aman
+            'role' => 'admin',  // Role admin
         ]);
     }
 }
