@@ -31,9 +31,24 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/rekomendasi', [RekomendasiController::class, 'index'])->name('rekomendasi.index'); // user hanya bisa melihat ini
     Route::get('/dashboard/rekomendasi/hitung/{siswa_id}', [RekomendasiController::class, 'hitungRekomendasi'])->name('rekomendasi.hitung'); // dan ini
     Route::get('/dashboard/nilai', [SiswaNilaiController::class, 'create'])->name('siswa_nilai.create'); // user hanya bisa melihat ini
+    Route::get('/web', function () {
+        return view('web');
+    })->name('web');
+    
+    Route::get('/ui', function () {
+        return view('ui');
+    })->name('ui');
+    
+    Route::get('/database', function () {
+        return view('database');
+    })->name('database');
+    
+    
 
     // Route yang hanya bisa diakses oleh admin
         Route::resource('/dashboard/mataPelajaran', MataPelajaranController::class);
         Route::resource('/dashboard/karir', KarirController::class);
         Route::resource('/dashboard/karakteristik', KarakteristikController::class);
+    
+    
 });
