@@ -32,6 +32,7 @@
                             <table class="table table-hover text-nowrap">
                                 <thead>
                                     <tr>
+                                        <th>No</th>
                                         <th>Karir</th>
                                         <th>Mata Pelajaran</th>
                                         <th>Karakteristik</th>
@@ -42,6 +43,7 @@
                                 <tbody>
                                     @foreach($karakteristiks as $karakteristik)
                                     <tr>
+                                        <td>{{ $loop->iteration }}</td>
                                         <td>{{ $karakteristik->karir->nama_karir }}</td>
                                         <td>{{ $karakteristik->mataPelajaran->nama_mapel }}</td>
                                         <td>{{ $karakteristik->karakteristik }}</td>

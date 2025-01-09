@@ -20,9 +20,12 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Tabel Siswa</h3>
+                            <h3 class="card-title">Tabel Nilai Siswa</h3>
                             <div class="card-tools d-flex">
                                 <!-- Tombol Add New -->
+                                @if(Auth::user()->role === 'admin')
+                                <a href="{{ route('siswa.create') }}" class="btn btn-success btn-sm mr-2">Add New</a>
+                                @endif
                                 <!-- Form Search -->
                                 <form action="{{ route('siswa.index') }}" method="GET" class="form-inline ml-2">
                                     <input type="text" name="search" class="form-control form-control-sm" placeholder="Search Siswa">

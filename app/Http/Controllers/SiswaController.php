@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Models\Siswa;
@@ -6,22 +7,78 @@ use Illuminate\Http\Request;
 
 class SiswaController extends Controller
 {
+    //
     public function index(Request $request)
     {
         $search = $request->input('search');
 
         if ($search) {
-            // Jika ada pencarian, lakukan pencarian dengan nama atau id
             $siswa = Siswa::where('Nama', 'like', "%$search%")
                             ->orWhere('id', 'like', "%$search%")
-                            ->with('mataPelajaran') // Eager load mataPelajaran dengan nilai
-                            ->paginate(10); // Gunakan pagination di sini
+                            ->paginate(10);
         } else {
-            // Jika tidak ada pencarian, ambil semua data siswa dengan pagination
-            $siswa = Siswa::with('mataPelajaran')->paginate(10); // Eager load mataPelajaran dengan nilai
+            $siswa = Siswa::paginate(10);
         }
 
-        // Mengembalikan data ke view siswa.index
         return view('siswa.index', compact('siswa'));
+    }
+
+
+    public function create()
+    {
+        return view('siswa.create');
+    }
+
+    // Menyimpan data siswa baru
+    public function store(Request $request)
+    {
+        $request->validate([
+            'Nama' => 'required|string',
+            'C1' => 'required|integer',
+            'C2' => 'required|integer',
+            'C3' => 'required|integer',
+            'C4' => 'required|integer',
+            'C5' => 'required|integer',
+            'C6' => 'required|integer',
+            'C7' => 'required|integer',
+        ]);
+
+        Siswa::create($request->all());
+        return redirect()->route('siswa.index');
+    }
+
+    // Form untuk mengedit data siswa
+    public function edit($id)
+    {
+        $siswa = Siswa::findOrFail($id);
+        return view('siswa.edit', compact('siswa'));
+    }
+
+    // Memperbarui data siswa
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'Nama' => 'required|string',
+            'C1' => 'required|integer',
+            'C2' => 'required|integer',
+            'C3' => 'required|integer',
+            'C4' => 'required|integer',
+            'C5' => 'required|integer',
+            'C6' => 'required|integer',
+            'C7' => 'required|integer',
+        ]);
+
+        $siswa = Siswa::findOrFail($id);
+        $siswa->update($request->all());
+
+        return redirect()->route('siswa.index');
+    }
+
+    // Menghapus data siswa
+    public function destroy($id)
+    {
+        $siswa = Siswa::findOrFail($id);
+        $siswa->delete();
+        return redirect()->route('siswa.index');
     }
 }

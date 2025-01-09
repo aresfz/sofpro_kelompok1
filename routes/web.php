@@ -18,7 +18,17 @@ Route::get('/', function () {
 Route::get('login', [AuthController::class, 'loginPage'])->name('login');
 Route::post('login', [AuthController::class, 'login'])->name('login.submit');
 Route::post('logout', [AuthController::class, 'logout'])->name('logout');
+Route::get('/web', function () {
+    return view('web');
+})->name('web');
 
+Route::get('/ui', function () {
+    return view('ui');
+})->name('ui');
+
+Route::get('/database', function () {
+    return view('database');
+})->name('database');
 // Semua route yang membutuhkan login
 Route::middleware(['auth'])->group(function () {
     
@@ -31,17 +41,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/rekomendasi', [RekomendasiController::class, 'index'])->name('rekomendasi.index'); // user hanya bisa melihat ini
     Route::get('/dashboard/rekomendasi/hitung/{siswa_id}', [RekomendasiController::class, 'hitungRekomendasi'])->name('rekomendasi.hitung'); // dan ini
     Route::get('/dashboard/nilai', [SiswaNilaiController::class, 'create'])->name('siswa_nilai.create'); // user hanya bisa melihat ini
-    Route::get('/web', function () {
-        return view('web');
-    })->name('web');
-    
-    Route::get('/ui', function () {
-        return view('ui');
-    })->name('ui');
-    
-    Route::get('/database', function () {
-        return view('database');
-    })->name('database');
+        Route::post('/dashboard/nilai', [SiswaNilaiController::class, 'store'])->name('siswa_nilai.store');
+
     
     
 

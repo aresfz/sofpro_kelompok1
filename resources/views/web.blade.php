@@ -123,35 +123,98 @@
 						<!-- Start Choose Left -->
 						<div class="choose-left">
 							<h3>Web Developer</h3>
-							<p>1. <b>Apa itu Pengembangan Web?</b> Sebelum mulai menulis kode, penting untuk memahami dasar-dasar pengembangan web. Pada tahap ini, Anda akan mempelajari:
-								<BR><b>Bagaimana situs web bekerja:</b> Memahami bagaimana permintaan dan respons terjadi antara klien (browser) dan server, serta bagaimana data ditampilkan di layar pengguna.
-								<BR><b>Perbedaan antara front-end dan back-end:</b> Mengetahui peran front-end (bagian yang dilihat pengguna) dan back-end (logika dan database yang bekerja di balik layar) dalam membangun sebuah situs web.
-								<BR><b>Menggunakan editor kode:</b> Mengenal alat-alat yang digunakan untuk menulis kode, seperti Visual Studio Code atau Sublime Text, yang akan mempermudah proses pengembangan.
-								<br>
-								<br>
-								2. <b>Front-End Dasar</b> Bagian front-end adalah bagian dari website yang dilihat dan diinteraksi oleh pengguna. Di sini, Anda akan belajar tiga teknologi utama yang membentuk tampilan situs web:
-								<BR><b>HTML: </b> Bahasa markup yang digunakan untuk membuat struktur halaman web, seperti judul, paragraf, gambar, dan link.
-								<br><b>CSS</b> Bahasa untuk mengatur tampilan dan gaya dari elemen HTML, seperti warna, ukuran font, tata letak, dan posisi.
-								<br><B>JavaScript:</B> Bahasa pemrograman yang membuat halaman web interaktif, seperti efek hover, animasi, dan validasi formulir.
-								<br>
-								<br>
-								3. <b>Tools</b> Pada tahap ini, Anda akan belajar tentang alat-alat yang membantu meningkatkan efisiensi dalam pengembangan:
-								<br><b>Package Managers:</b> Seperti npm atau Yarn, yang memudahkan Anda untuk mengelola dan menginstal library dan framework JavaScript.
-								<br><b>Build Tools:</b> Alat seperti Webpack atau Gulp yang membantu dalam proses build, seperti minifikasi file, kompilasi, dan optimasi kinerja.
-								<br><b>Version Control:</b>Version Control: Sistem seperti Git yang digunakan untuk melacak perubahan kode dan memudahkan kolaborasi dengan pengembang lain.
-								<br>
-								<br>
-								4A. <b>Front-End Lanjutan</b> Setelah menguasai dasar-dasar front-end, Anda bisa melanjutkan dengan keterampilan lanjutan:
-								<br><b>Sass:</b> Preprocessor CSS yang menambahkan fitur tambahan seperti variabel dan nesting untuk mempermudah pengelolaan CSS.
-								<br><b>Desain Responsif:</b> Teknik untuk memastikan website tampil optimal di berbagai perangkat, seperti smartphone, tablet, dan desktop.
-								<br><b>Framework JavaScript:</b> Library seperti React, Vue, atau Angular yang memudahkan dalam membangun aplikasi web yang kompleks dan interaktif.
-								<br>
-								<br>
-								4B. <b>Back-End Dasar</b> Untuk mendalami pengembangan back-end, Anda perlu memahami komponen dasar berikut:
-								<br><b>Server:</b> Komputer atau aplikasi yang menerima permintaan dari klien dan mengirimkan respons, seperti Node.js, Apache, atau Nginx.
-								<br><b>Bahasa Pemrograman:</b> Bahasa yang digunakan di sisi server untuk logika aplikasi, seperti PHP, Python, Ruby, atau JavaScript (Node.js).
-								<br><b>Database: </b>Tempat untuk menyimpan data aplikasi, seperti MySQL, PostgreSQL, MongoDB, atau SQLite, yang memungkinkan data disimpan dan diambil sesuai kebutuhan.
-							
+							<h2>1. Pemahaman Dasar Web Development</h2>
+						<ul>
+							<li><strong>Apa itu Web Development?</strong>
+								<ul>
+									<li><strong>Front-End Development:</strong> Fokus pada tampilan dan interaksi pengguna dengan aplikasi atau situs web (HTML, CSS, JavaScript).</li>
+									<li><strong>Back-End Development:</strong> Fokus pada logika server, basis data, dan API untuk mendukung aplikasi.</li>
+									<li><strong>Full-Stack Development:</strong> Menggabungkan kemampuan front-end dan back-end.</li>
+								</ul>
+							</li>
+							<li><strong>Prinsip Utama:</strong>
+								<ul>
+									<li>Struktur kode yang bersih dan dapat dipahami.</li>
+									<li>Responsivitas dan performa tinggi.</li>
+									<li>Keamanan aplikasi web.</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h2>2. Belajar Dasar-Dasar</h2>
+						<ul>
+							<li><strong>HTML (HyperText Markup Language):</strong> Dasar untuk struktur halaman web.</li>
+							<li><strong>CSS (Cascading Style Sheets):</strong> Untuk mendesain tampilan halaman (layout, warna, tipografi).</li>
+							<li><strong>JavaScript:</strong> Menambahkan interaktivitas seperti animasi, validasi form, dan lainnya.</li>
+						</ul>
+
+						<h2>3. Framework dan Library</h2>
+						<ul>
+							<li><strong>Front-End Framework:</strong>
+								<ul>
+									<li>React.js</li>
+									<li>Vue.js</li>
+									<li>Angular</li>
+								</ul>
+							</li>
+							<li><strong>CSS Framework:</strong>
+								<ul>
+									<li>Bootstrap</li>
+									<li>Tailwind CSS</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h2>4. Back-End</h2>
+						<ul>
+							<li><strong>Bahasa Pemrograman:</strong>
+								<ul>
+									<li>Node.js (JavaScript)</li>
+									<li>Python (Django, Flask)</li>
+									<li>PHP (Laravel, CodeIgniter)</li>
+								</ul>
+							</li>
+							<li><strong>Database:</strong>
+								<ul>
+									<li>Relasional: MySQL, PostgreSQL</li>
+									<li>NoSQL: MongoDB, Firebase</li>
+								</ul>
+							</li>
+						</ul>
+
+						<h2>5. Tools</h2>
+						<ul>
+							<li><strong>Version Control:</strong> Gunakan Git untuk mengelola perubahan kode.</li>
+							<li><strong>Platform:</strong> GitHub, GitLab, atau Bitbucket untuk kolaborasi kode.</li>
+							<li><strong>Web Hosting:</strong> Deploy aplikasi menggunakan Netlify, Vercel, atau AWS.</li>
+						</ul>
+
+						<h2>6. Test dan Debug</h2>
+						<ul>
+							<li><strong>Tools Pengujian:</strong> Jest, Mocha untuk pengujian unit, dan Cypress untuk pengujian end-to-end.</li>
+							<li><strong>Debugging:</strong> Gunakan DevTools di browser untuk memecahkan masalah.</li>
+						</ul>
+
+						<h2>7. Portofolio</h2>
+						<ul>
+							<li><strong>Proyek Pemula:</strong> Halaman portfolio pribadi, aplikasi kalkulator, atau blog sederhana.</li>
+							<li><strong>Proyek Menengah:</strong> Sistem login, e-commerce sederhana, atau aplikasi todolist dengan backend.</li>
+							<li><strong>Proyek Tingkat Lanjut:</strong> Aplikasi real-time seperti chat, integrasi API pihak ketiga.</li>
+						</ul>
+
+						<h2>8. Karir sebagai Web Developer</h2>
+						<ul>
+							<li><strong>Jalur Karir:</strong>
+								<ul>
+									<li>Front-End Developer</li>
+									<li>Back-End Developer</li>
+									<li>Full-Stack Developer</li>
+								</ul>
+							</li>
+							<li><strong>Persiapan Portofolio:</strong> Tampilkan proyek dengan penjelasan teknis dan dampaknya.</li>
+							<li><strong>Ikuti Komunitas:</strong> Bergabung di GitHub, StackOverflow, atau komunitas lokal untuk belajar dan berbagi.</li>
+						</ul>
+
 							
 						</div>
 						<!-- End Choose Left -->

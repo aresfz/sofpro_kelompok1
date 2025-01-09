@@ -75,7 +75,7 @@
           <li class="nav-item">
             <a href="{{URL::to('/dashboard/nilai')}}" class="nav-link">
             <i class="nav-icon fas fa-user-plus"></i>
-              <p>Kelola Siswa</p>
+              <p>Input Nilai</p>
             </a>
           </li>
           @endif
